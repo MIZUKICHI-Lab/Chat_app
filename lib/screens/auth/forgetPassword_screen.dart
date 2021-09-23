@@ -143,14 +143,18 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
         vertical: height * 0.030,
       ),
       width: double.infinity,
-      child: RaisedButton(
-        elevation: 5.0,
+      child: ElevatedButton(
         onPressed: _submit,
-        padding: EdgeInsets.all(height * 0.02),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(height * 0.04),
+        style: ElevatedButton.styleFrom(
+          elevation: 5.0,
+          padding: EdgeInsets.all(height * 0.02),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(height * 0.04),
+          ),
+          primary: Colors.white,
         ),
-        color: Colors.white,
+
+        //color: Colors.white,
         child: Text(
           'メールを送信',
           style: TextStyle(

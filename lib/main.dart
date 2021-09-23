@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
   Future<Widget> userSignedIn() async {
     User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
-      DocumentSnapshot userData = await FirebaseFirestore.instance
+      DocumentSnapshot<Map<String, dynamic>> userData = await FirebaseFirestore
+          .instance
           .collection('users')
           .doc(user.uid)
           .get();
